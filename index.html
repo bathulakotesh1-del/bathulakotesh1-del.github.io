@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kotesh | Electronics & Communication Engineering</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0f172a;
+            border-bottom: 1px solid #334155;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero p:first-child {
+            color: #38bdf8;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            font-weight: normal;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            color: #cbd5e1;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+        }
+
+        .btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .primary-btn {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 35px;
+            color: white;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        .about-text {
+            max-width: 850px;
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            max-width: 850px;
+        }
+
+        .skill {
+            padding: 10px 16px;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            color: #cbd5e1;
+            background: #1e293b;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+            font-size: 21px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        .project-card ul {
+            margin-left: 20px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .education-box {
+            max-width: 850px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .education-box h3 {
+            color: #38bdf8;
+        }
+
+        .education-box p {
+            color: #cbd5e1;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">KOTESH</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Home -->
+    <section class="hero" id="home">
+
+        <p>Hello, I'm</p>
+
+        <h1>Kotesh Battula</h1>
+
+        <h2>Electronics & Communication Engineering Student</h2>
+
+        <p class="hero-description">
+            Final-year ECE undergraduate interested in embedded systems,
+            IoT, VLSI and electronics. I enjoy building practical
+            hardware-based projects using Arduino, ESP32 and other
+            embedded platforms.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn primary-btn"
+               href="#projects">
+                View My Projects
+            </a>
+
+            <a class="btn"
+               href="https://github.com/bathulakotesh1-del"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a class="btn"
+               href="https://www.linkedin.com/in/kotesh-battula-150b59292/"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p class="about-text">
+            I am a final-year Electronics and Communication Engineering
+            student at SRM University-AP. My interests include embedded
+            systems, IoT, programming and electronics. I have worked on
+            practical projects involving Arduino, ESP32, sensors,
+            communication modules and automation systems.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            Technical <span>Skills</span>
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill">C</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">Arduino UNO</div>
+            <div class="skill">ESP32</div>
+            <div class="skill">MATLAB</div>
+            <div class="skill">Embedded Systems</div>
+            <div class="skill">IoT</div>
+            <div class="skill">Basic Electronics</div>
+            <div class="skill">Problem Solving</div>
+            <div class="skill">Communication</div>
+            <div class="skill">Team Collaboration</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2 class="section-title">
+            My <span>Projects</span>
+        </h2>
+
+        <div class="projects">
+
+
+            <!-- Project 1 -->
+            <div class="project-card">
+
+                <h3>🔥 Fire Fighter Robot Using Arduino</h3>
+
+                <p>
+                    An Arduino-based fire-fighting robot designed to
+                    detect fire and extinguish it using a water pump.
+                    The system supports automatic operation and
+                    Bluetooth-based manual control.
+                </p>
+
+                <ul>
+                    <li>Arduino UNO</li>
+                    <li>Flame Sensors</li>
+                    <li>L298N Motor Driver</li>
+                    <li>Relay & Water Pump</li>
+                    <li>ESP32-S Bluetooth Control</li>
+                    <li>ESP32-CAM Live Monitoring</li>
+                </ul>
+
+                <a class="btn"
+                   href="https://github.com/bathulakotesh1-del/Fire-Fighter-Robot-Using-Arduino"
+                   target="_blank">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="project-card">
+
+                <h3>🚗 Smart Accident Detection System</h3>
+
+                <p>
+                    An embedded system designed to detect vehicle
+                    accidents using an accelerometer and send an
+                    emergency notification through GSM.
+                </p>
+
+                <ul>
+                    <li>Arduino UNO</li>
+                    <li>Accelerometer</li>
+                    <li>GSM Module</li>
+                    <li>Crash Detection</li>
+                    <li>Emergency SMS</li>
+                </ul>
+
+                <a class="btn"
+                   href="#contact">
+                    Project Details
+                </a>
+
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="project-card">
+
+                <h3>💡 Automatic Night Light</h3>
+
+                <p>
+                    An automatic lighting system that uses an LDR
+                    and 555 Timer IC to control an LED according
+                    to the surrounding light conditions.
+                </p>
+
+                <ul>
+                    <li>LDR</li>
+                    <li>555 Timer IC</li>
+                    <li>Resistors</li>
+                    <li>LED</li>
+                    <li>Automatic Light Control</li>
+                </ul>
+
+                <a class="btn"
+                   href="https://github.com/bathulakotesh1-del/AUTOMATIC-NIGHT-LIGHT-CONTROL-SYSTEM"
+                   target="_blank">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2 class="section-title">
+            <span>Education</span>
+        </h2>
+
+        <div class="education-box">
+
+            <h3>B.Tech — Electronics and Communication Engineering</h3>
+
+            <p>
+                SRM University-AP, Andhra Pradesh
+            </p>
+
+            <p>
+                2023 – 2027 | CGPA: 7.98
+            </p>
+
+        </div>
+
+
+        <div class="education-box">
+
+            <h3>Intermediate (XII)</h3>
+
+            <p>
+                Sri Sadhana Junior College
+            </p>
+
+            <p>
+                2023 | 91.4%
+            </p>
+
+        </div>
+
+
+        <div class="education-box">
+
+            <h3>SSC (X)</h3>
+
+            <p>
+                APSWR School for Boys
+            </p>
+
+            <p>
+                2021 | 85.83%
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Project Video -->
+    <section id="video">
+
+        <h2 class="section-title">
+            Project <span>Video</span>
+        </h2>
+
+        <p class="about-text">
+            Project demonstration and explanation video will be added here.
+        </p>
+
+        <br>
+
+        <a class="btn" href="#" target="_blank">
+            Watch Project Video
+        </a>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">
+            Get In <span>Touch</span>
+        </h2>
+
+        <p>
+            Interested in connecting with me or learning more about my projects?
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+            <a class="btn"
+               href="https://github.com/bathulakotesh1-del"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a class="btn"
+               href="https://www.linkedin.com/in/kotesh-battula-150b59292/"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Kotesh Battula | Electronics & Communication Engineering
+        </p>
+
+    </footer>
+
+</body>
+</html>
